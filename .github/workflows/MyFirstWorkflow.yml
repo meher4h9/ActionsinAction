@@ -9,3 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello world"
+      - name: Checkout
+        uses: actions/checkout@v6.1.0
+      - name: List files in the repo
+        run: |
+          echo "the reposiory ${{github.repository}} contains following files:"
+          tree
+ 
